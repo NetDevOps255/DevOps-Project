@@ -26,7 +26,7 @@
     - name: Start container
       docker_container:
         name: my-simple-resume
-        image: madt4lyphe/simple-resume
+        image: madt4lyphe/simple-resume:v2
         state: started
         published_ports:
           - 0.0.0.0:8080:80
