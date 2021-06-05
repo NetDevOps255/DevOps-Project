@@ -5,9 +5,14 @@ FROM nginx:alpine
 
 #COPY styles.css /usr/share/nginx/html
 
-COPY index.html /var/www/html/index.nginx-debian.html
+#configuration
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-COPY styles.css /var/www/html/index.nginx-debian.html
+COPY ./*.html /usr/share/nginx/html/
+COPY ./*.css /usr/share/nginx/html/
+#COPY ./*.png /usr/share/nginx/html/
+#COPY ./*.js /usr/share/nginx/html/
 
 
+# https://thatdevopsguy.medium.com/how-to-create-a-static-web-server-for-html-with-nginx-99bf8226bce6
 # https://hub.docker.com/_/nginx
