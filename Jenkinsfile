@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("madt4lyphe/simple-resume:latest")
+	    app = docker.build("madt4lyphe/simple-resume:${DOCKER_TAG}")
     }
 
     stage('Test image') {
