@@ -29,4 +29,4 @@
         image: madt4lyphe/simple-resume
         state: started
         published_ports:
-          - 0.0.0.0:81:81
+          - 0.0.0.0:8080:80
