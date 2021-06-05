@@ -6,11 +6,11 @@ node {
 
         checkout scm
     }
-/*
+
     stage('Build image') {
         /* This builds the actual image */
-/*
-        app = docker.build("madt4lyphe/simple-resume:latest")
+
+        app = docker.build("madt4lyphe/simple-resume:v1")
     }
 
     stage('Test image') {
@@ -30,7 +30,7 @@ node {
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
-  */
+  
     stage('Deploy Docker') {
         /* This builds the actual image */
 
