@@ -11,10 +11,6 @@
       pip:
         name: docker-py
         state: present
-    - name: Pull default Docker image
-      docker_image:
-        name: madt4lyphe/simple-resume
-        tag: latest
     - name: Start container
       docker_container:
         name: my-simple-resume
