@@ -1,15 +1,15 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 FROM nginx:alpine
 
-#COPY index.html /usr/share/nginx/html
+COPY index.html /usr/share/nginx/html
 
-#COPY styles.css /usr/share/nginx/html
+COPY styles.css /usr/share/nginx/html
 
 #configuration
-COPY ./nginx.conf /etc/nginx/nginx.conf
+#COPY ./nginx.conf /etc/nginx/nginx.conf
 
-COPY ./*.html /usr/share/nginx/html/
-COPY ./*.css /usr/share/nginx/html/
+#COPY ./*.html /usr/share/nginx/html/
+#COPY ./*.css /usr/share/nginx/html/
 #COPY ./*.png /usr/share/nginx/html/
 #COPY ./*.js /usr/share/nginx/html/
 
