@@ -14,11 +14,11 @@
     - name: Pull default Docker image
       docker_image:
         name: madt4lyphe/simple-resume
-        tag: v1
+        tag: latest
     - name: Start container
       docker_container:
         name: my-simple-resume
-        image: madt4lyphe/simple-resume:v1
+        image: madt4lyphe/simple-resume:latest
         state: started
         published_ports:
           - 0.0.0.0:8080:80
