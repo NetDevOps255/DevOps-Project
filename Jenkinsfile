@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-	    app = docker.build("madt4lyphe/simple-resume:${DOCKER_TAG}")
+	    app = docker.build("madt4lyphe/my-resume")
     }
 
     stage('Test image') {
@@ -34,6 +34,6 @@ node {
     stage('Deploy Docker') {
         /* This builds the actual image */
 
-         app = ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
+         app = ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
     }
 }
