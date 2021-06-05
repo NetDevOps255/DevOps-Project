@@ -1,0 +1,2 @@
+[dev]
+172.31.63.189 ansible_user=ec2-user
