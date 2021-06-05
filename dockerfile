@@ -13,8 +13,6 @@ COPY ./*.css /usr/share/nginx/html/
 #COPY ./*.png /usr/share/nginx/html/
 #COPY ./*.js /usr/share/nginx/html/
 
-nginx -s reload
-
 
 # https://thatdevopsguy.medium.com/how-to-create-a-static-web-server-for-html-with-nginx-99bf8226bce6
 # https://hub.docker.com/_/nginx
