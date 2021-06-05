@@ -25,7 +25,7 @@
         tag: latest
     - name: Start container
       docker_container:
-        name: simple-resume
+        name: my-simple-resume
         image: madt4lyphe/simple-resume
         state: started
         published_ports:
