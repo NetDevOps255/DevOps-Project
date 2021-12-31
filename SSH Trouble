@@ -1,0 +1,24 @@
+no matching key exchange method found
+or 
+no matching cipher found
+
+sudo nano /etc/ssh/ssh_config
+
+KexAlgorithms=curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+https://github.com/Keith-OGIT/FirstSteps/blob/master/Pi%20Ansible/Steps%20for%20Pi%20Ansible
+
+
+
+https://networkforbeginners.com/no-matching-key-exchange-method-found/
+
+Admin@= ~ $ ssh 192.168.1.2 -o Kexalgorithms=+diffie-hellman-group1-sha1
+
+Or
+Admin@= ~ $ 'hostname' -o Kexalgorithms=+diffie-hellman-group1-sha1
+
+Example 
+Admin@= ~ $ SW-1 -o Kexalgorithms=+diffie-hellman-group1-sha1
+
+ansible all -e 'ansible_python_interpreter=/usr/bin/python3' -u linux --ask-pass -m ping
